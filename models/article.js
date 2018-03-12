@@ -1,7 +1,10 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
 var articleSchema = mongoose.Schema({
   title: String,
   date: Date,
-  url: String
+  url: String,
+  notes: String
 });
+
+module.exports = articleSchema;
