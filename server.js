@@ -8,11 +8,15 @@ var mongoose = require('mongoose');
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(bodyParser.json({
+  type: "application/vnd.api+json"
+}));
 
-mongoose.connect('mongodb://k90armstrong:' + process.env.MONGONYTPASS + '@ds235778.mlab.com:35778/nytreact');
+mongoose.connect('mongodb://cwax06:' + process.env.MONGONYTPASS + '@ds235778.mlab.com:35778/nytreact');
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -20,9 +24,9 @@ if (process.env.NODE_ENV === "production") {
 // Send every request to the React app
 require('./api')(app);
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
