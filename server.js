@@ -9,15 +9,17 @@ var mongoose = require("mongoose");
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-
-var test =
-  "mongodb://cwax06:" +
-  process.env.MONGONYTPASS +
-  "@ds215019.mlab.com:15019/nytreact";
-console.log(test);
+app.use(
+  bodyParser.json({
+    type: "application/vnd.api+json"
+  })
+);
 
 mongoose.connect(
   "mongodb://asjones37:" +
