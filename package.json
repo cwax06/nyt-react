@@ -10,17 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k90armstrong/nyt-react.git"
+    "url": "git+https://github.com/cwax06/nyt-react.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/k90armstrong/nyt-react/issues"
+    "url": "https://github.com/cwax06/nyt-react/issues"
   },
-  "homepage": "https://github.com/k90armstrong/nyt-react#readme",
+  "homepage": "https://github.com/cwax06/nyt-react#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "mongoose": "^5.0.5"
   }
